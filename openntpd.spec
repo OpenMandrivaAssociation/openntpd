@@ -12,6 +12,9 @@ Requires(preun): rpm-helper
 Requires(pre): rpm-helper
 Requires(postun): rpm-helper
 BuildRequires:	openssl-devel
+BuildRequires:	bison
+BuildRequires:	byacc
+BuildRequires:	groff-for-man
 Conflicts:	ntp ntp-client
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
