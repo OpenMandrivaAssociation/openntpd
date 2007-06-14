@@ -6,7 +6,7 @@ License:	BSD
 Group:		System/Servers
 URL:		http://www.openntpd.org
 Source0:	ftp://ftp.openbsd.org/pub/OpenBSD/OpenNTPD/%{name}-%{version}.tar.bz2
-Source1:	openntpd.init.bz2
+Source1:	openntpd.init
 Requires(post): rpm-helper
 Requires(preun): rpm-helper
 Requires(pre): rpm-helper
@@ -25,7 +25,7 @@ redistributing the local clock.
 
 %setup -q -n %{name}-%{version}
 
-bzcat %{SOURCE1} > openntpd.init
+cp %{SOURCE1} openntpd.init
 
 %build
 
@@ -66,4 +66,3 @@ install -m0755 openntpd.init %{buildroot}%{_initrddir}/ntpd
 %attr(0755,root,root) %{_initrddir}/ntpd
 %attr(0755,root,root) %{_sbindir}/*
 %attr(0644,root,root) %{_mandir}/man*/*
-
