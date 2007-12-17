@@ -16,7 +16,6 @@ BuildRequires:	bison
 BuildRequires:	byacc
 BuildRequires:	groff-for-man
 Conflicts:	ntp ntp-client
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 OpenNTPD is a FREE, easy to use implementation of the Network Time
