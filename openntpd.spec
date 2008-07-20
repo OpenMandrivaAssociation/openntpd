@@ -1,7 +1,7 @@
 Summary:	OpenNTPD - NTP Time Synchronization Client/Server 
 Name:		openntpd
 Version:	3.9p1
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	BSD
 Group:		System/Servers
 URL:		http://www.openntpd.org
@@ -41,7 +41,7 @@ cp %{SOURCE1} openntpd.init
 %make
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 install -d %{buildroot}%{_initrddir}
 
@@ -60,7 +60,7 @@ install -m0755 openntpd.init %{buildroot}%{_initrddir}/ntpd
 %_preun_service ntpd
 
 %clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
