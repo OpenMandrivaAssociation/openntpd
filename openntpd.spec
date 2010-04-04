@@ -1,7 +1,7 @@
 Summary:	OpenNTPD - NTP Time Synchronization Client/Server 
 Name:		openntpd
 Version:	3.9p1
-Release:	%mkrel 4
+Release:	%mkrel 5
 License:	BSD
 Group:		System/Servers
 URL:		http://www.openntpd.org
@@ -15,7 +15,7 @@ BuildRequires:	openssl-devel
 BuildRequires:	bison
 BuildRequires:	byacc
 BuildRequires:	groff-for-man
-Conflicts:	ntp ntp-client
+Conflicts:	ntp-client
 Provides:	ntp
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
