@@ -1,4 +1,4 @@
-Summary:	OpenNTPD - NTP Time Synchronization Client/Server 
+Summary:	- NTP Time Synchronization Client/Server 
 Name:		openntpd
 Version:	3.9p1
 Release:	%mkrel 8
