@@ -1,7 +1,7 @@
-Summary:	- NTP Time Synchronization Client/Server 
+Summary:	NTP Time Synchronization Client/Server 
 Name:		openntpd
 Version:	3.9p1
-Release:	%mkrel 8
+Release:	9
 License:	BSD
 Group:		System/Servers
 URL:		http://www.openntpd.org
@@ -17,7 +17,6 @@ BuildRequires:	byacc
 BuildRequires:	groff-for-man
 Conflicts:	ntp-client
 Provides:	ntp
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 OpenNTPD is a FREE, easy to use implementation of the Network Time
@@ -42,7 +41,6 @@ cp %{SOURCE1} openntpd.init
 %make
 
 %install
-rm -rf %{buildroot}
 
 install -d %{buildroot}%{_initrddir}
 
@@ -61,7 +59,6 @@ mv openntpd.init %{buildroot}%{_initrddir}/ntpd
 %_preun_service ntpd
 
 %clean
-rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
