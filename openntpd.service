@@ -1,0 +1,11 @@
+[Unit]
+Description=Synchronizes system time using the Network Time Protocol (NTP)
+After=network.target nss-lookaup.target
+
+[Service]
+Type=forking
+EnvironmentalFile=-/etc/ntpd.conf
+ExecStart=/usr/sbin/ntpd
+
+[Install]
+WantedBy=multi-user.target
