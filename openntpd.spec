@@ -1,7 +1,7 @@
 Summary:	OpenNTPD - NTP Time Synchronization Client/Server 
 Name:		openntpd
 Version:	3.9p1
-Release:	10
+Release:	11
 License:	BSD
 Group:		System/Servers
 URL:		http://www.openntpd.org
