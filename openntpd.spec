@@ -4,7 +4,7 @@ Version:	3.9p1
 Release:	11
 License:	BSD
 Group:		System/Servers
-URL:		http://www.openntpd.org
+URL:		https://www.openntpd.org
 Source0:	ftp://ftp.openbsd.org/pub/OpenBSD/OpenNTPD/%{name}-%{version}.tar.bz2
 Source1:	openntpd.service
 Requires(post): rpm-helper
